@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.studyapp_sql.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_kotlinFragment"
+            app:destination="@id/kotlinFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_androidFragment"
+            app:destination="@id/androidFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kotlinFragment"
+        android:name="com.example.studyapp_sql.fragments.KotlinFragment"
+        android:label="fragment_kotlin"
+        tools:layout="@layout/fragment_kotlin" >
+        <action
+            android:id="@+id/action_kotlinFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/androidFragment"
+        android:name="com.example.studyapp_sql.fragments.AndroidFragment"
+        android:label="fragment_android"
+        tools:layout="@layout/fragment_android" >
+        <action
+            android:id="@+id/action_androidFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
